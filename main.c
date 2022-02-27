@@ -854,7 +854,7 @@ void in_pause() {
 	game.pause = !game.pause;
 	if (game.pause) {
 		play_sfx(SFX_PAUSE);
-		print_msg("* pause! *", 5, 3);
+		print_msg("*akwared silence...*", 5, 3);
 		hide_next();
 	} else {
 		refresh_board(0);
@@ -1493,11 +1493,11 @@ void close_net()  {
 void display_result(char msg) {
 	switch (game.status) {
 		case END_WON:
-			print_msg(" YOU WON !", 4, 2);
+			print_msg("you won.", 4, 2);
 			break;
 
 		case END_LOST:
-			print_msg("LOOSER !!!", 4, 1);
+			print_msg("git gud!!!", 4, 1);
 			break;
 
 		case END_PEER_LEFT:
@@ -1505,7 +1505,7 @@ void display_result(char msg) {
 			break;
 
 		case END_QUIT:
-			print_msg("BYE BYE !!", 4, 3);
+			print_msg("Exiting.", 4, 3);
 			break;
 
 		default:
